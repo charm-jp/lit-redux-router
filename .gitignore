@@ -20,5 +20,7 @@ coverage
 
 # build and temp folders
 dist
+bundle.js
+docs/_site
 
 !demo/**
