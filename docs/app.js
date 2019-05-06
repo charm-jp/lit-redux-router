@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'https://unpkg.com/lit-element/lit-element.js?module';
+import './header.js';
 
 class AppDocs extends LitElement {
   static get styles() {
@@ -19,6 +20,7 @@ class AppDocs extends LitElement {
         @import url(https://unpkg.com/@material/typography/dist/mdc.typography.min.css);
       </style>
       <div class="app mdc-typography">
+        <app-header></app-header>
       </div>
     `;
   }
