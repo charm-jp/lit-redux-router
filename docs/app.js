@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'https://unpkg.com/lit-element/lit-element.js?module';
 import './header.js';
 import './footer.js';
+import './main.js';
 
 class AppDocs extends LitElement {
   static get styles() {
@@ -22,6 +23,7 @@ class AppDocs extends LitElement {
       </style>
       <div class="app mdc-typography">
         <app-header></app-header>
+        <app-main></app-main>
         <app-footer></app-footer>
       </div>
     `;
