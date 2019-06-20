@@ -8,18 +8,16 @@
   "env": {
     "browser": true
   },
-  "plugins": [ "@typescript-eslint", "jest" ],
+  "plugins": ["@typescript-eslint", "jest"],
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [ ".ts", ".js" ]
+        "extensions": [".ts", ".js"]
       }
     }
   },
   "overrides": [{
-    "files": [
-      "src/**/__tests__/*.ts"
-    ],
+    "files": ["src/**/__tests__/*.ts"],
     "env": {
       "jest": true
     },
