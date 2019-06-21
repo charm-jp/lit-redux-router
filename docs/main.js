@@ -4,6 +4,8 @@ import store from './store.js';
 
 import './home.js';
 import './getting-started.js';
+import './not-found.js';
+
 connectRouter(store);
 
 class AppMain extends LitElement {
@@ -22,6 +24,7 @@ class AppMain extends LitElement {
   render() {
     return html`
       <main>
+        <lit-route component="app-not-found"></lit-route>
         <lit-route path="/" component="app-home"></lit-route>
         <lit-route path="/getting-started" component="app-getting-started"></lit-route>
       </main>
