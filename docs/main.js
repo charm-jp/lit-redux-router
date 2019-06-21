@@ -3,6 +3,7 @@ import { connectRouter } from 'https://unpkg.com/lit-redux-router/dist/lit-redux
 import store from './store.js';
 
 import './home.js';
+import './getting-started.js';
 connectRouter(store);
 
 class AppMain extends LitElement {
@@ -20,9 +21,9 @@ class AppMain extends LitElement {
 
   render() {
     return html`
-      <main></main>
       <main>
         <lit-route path="/" component="app-home"></lit-route>
+        <lit-route path="/getting-started" component="app-getting-started"></lit-route>
       </main>
     `;
   }
