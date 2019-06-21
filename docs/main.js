@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'https://unpkg.com/lit-element/lit-element
 import { connectRouter } from 'https://unpkg.com/lit-redux-router/dist/lit-redux-router.js?module';
 import store from './store.js';
 
+import './home.js';
 connectRouter(store);
 
 class AppMain extends LitElement {
@@ -20,6 +21,9 @@ class AppMain extends LitElement {
   render() {
     return html`
       <main></main>
+      <main>
+        <lit-route path="/" component="app-home"></lit-route>
+      </main>
     `;
   }
 }
