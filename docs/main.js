@@ -9,7 +9,10 @@ class AppMain extends LitElement {
     return css`
       main {
         min-height: 300px;
-        padding: 64px 24px 24px;
+        box-sizing: border-box;
+        padding: 80px 20px 20px;
+        max-width: 1260px;
+        margin: 0 auto;
       }
     `;
   }

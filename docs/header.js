@@ -8,8 +8,15 @@ class AppHeader extends LitElement {
         top: 0;
       }
 
+      .mdc-top-app-bar__row {
+        padding: 0 8px;
+        max-width: 1260px;
+        margin: 0 auto;
+      }
+
       .mdc-top-app-bar__title {
         color: inherit;
+        padding-left: 0;
       }
     `;
   }
