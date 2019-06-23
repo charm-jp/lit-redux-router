@@ -1,4 +1,5 @@
 import { LitElement, html } from 'https://unpkg.com/lit-element/lit-element.js?module';
+import './code.js';
 
 class AppGettingStarted extends LitElement {
   render() {
@@ -10,41 +11,36 @@ class AppGettingStarted extends LitElement {
 
       <p>Install this library and its peer dependencies</p>
 
-      <pre>
-        <code>
-          yarn add lit-redux-router
-          yarn add lit-html lit-element pwa-helpers redux
-        </code>
-      </pre>
+      <app-code>
+yarn add lit-redux-router
+yarn add lit-html lit-element pwa-helpers redux
+<div>asdf</div>
+      </app-code>
 
       <p>First the router needs to connect to a redux store.</p>
 
-      <pre>
-        <code>
-          import { LitElement, html } from 'lit-element';
-          import { connectRouter } from 'lit-redux-router';
-          import store from './store.js';
+      <app-code>
+import { LitElement, html } from 'lit-element';
+import { connectRouter } from 'lit-redux-router';
+import store from './store.js';
 
-          connectRouter(store);
-        </code>
-      </pre>
+connectRouter(store);
+      </app-code>
 
       <p>Add a <i>lit-route</i> element with a specific path and content</p>
 
-      <pre>
-        <code>
-          class MyApp extends LitElement {
-            render() {
-              return html\`
-                &lt;div class="app-content"&gt;
-                  &lt;lit-route path="/"&gt;&lt;h1&gt;Home&lt;/h1&gt;&lt;/lit-route&gt;
-                &lt;/div&gt;
-              \`;
-            }
-          }
-          customElements.define('my-app', MyApp);
-        </code>
-      </pre>
+      <app-code>
+class MyApp extends LitElement {
+  render() {
+    return html\`
+      &lt;div class="app-content"&gt;
+        &lt;lit-route path="/"&gt;&lt;h1&gt;Home&lt;/h1&gt;&lt;/lit-route&gt;
+      &lt;/div&gt;
+    \`;
+  }
+}
+customElements.define('my-app', MyApp);
+      </app-code>
     `;
   }
 }
