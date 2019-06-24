@@ -4,6 +4,7 @@ import store from './store.js';
 
 import './home.js';
 import './getting-started.js';
+import './render-content.js';
 import './not-found.js';
 
 connectRouter(store);
@@ -75,12 +76,45 @@ class AppMain extends LitElement {
           <lit-route component="app-not-found"></lit-route>
           <lit-route path="/" component="app-home"></lit-route>
           <lit-route path="/getting-started" component="app-getting-started"></lit-route>
+          <lit-route path="/render-content-for-a-route" component="app-render-content"></lit-route>
         </main>
         <aside>
           <nav>
             <h1 class="mdc-typography--headline5">Content table</h1>
             <ul>
               <li><a href="/getting-started">Getting Started</a></li>
+              <li>
+                <a href="/render-content-for-a-route">Render content for a route</a>
+                <ul>
+                  <li><a href="#with-children-elements">with children elements</a></li>
+                  <li><a href="#with-a-component">with a component</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Matching cases for route paths</a>
+                <ul>
+                  <li><a href="#">text path</a></li>
+                  <li><a href="#">path with variables</a></li>
+                  <li><a href="#">not found path</a></li>
+                  <li><a href="#">every route except matching route</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Trigger a route path</a>
+                <ul>
+                  <li><a href="#">with links</a></li>
+                  <li><a href="#">with a redux action</a></li>
+                </ul>
+              </li>
+              <li><a href="">Nesting routes</a></li>
+              <li>
+                <a href="">Scroll</a>
+                <ul>
+                  <li><a href="#">Scroll into view</a></li>
+                  <li><a href="#">Smooth scrolling</a></li>
+                  <li><a href="#">Disable default scroll to top</a></li>
+                </ul>
+              </li>
             </ul>
           </nav>
         </aside>
