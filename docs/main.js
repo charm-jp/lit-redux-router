@@ -12,26 +12,29 @@ class AppMain extends LitElement {
   static get styles() {
     return css`
       .app-main {
+        --aside-width: 400px;
         max-width: 1260px;
         margin: 0 auto;
         position: relative;
-        padding-right: 250px;
+        padding-right: var(--aside-width);
         box-sizing: border-box;
       }
 
       main {
         min-height: 300px;
         box-sizing: border-box;
-        padding: 80px 20px 20px;
+        padding: 80px 40px 20px 20px;
       }
 
       aside {
         box-sizing: border-box;
-        padding: 113px 20px 20px;
-        position: absolute;
+        padding: 113px 20px 20px 40px;
+        position: fixed;
+        height: 100%;
         top: 0;
         right: 0;
-        width: 250px;
+        width: calc((100vw - 1260px) / 2 + var(--aside-width));
+        background-color: #ECEFF1;
       }
 
       aside a {
@@ -41,6 +44,23 @@ class AppMain extends LitElement {
 
       aside a:hover {
         text-decoration: underline;
+      }
+
+      aside ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      aside li {
+        margin: 10px 0;
+      }
+
+      aside ul ul {
+        margin-left: 20px;
+      }
+
+      aside ul ul li {
+        margin: 5px 0;
       }
     `;
   }
@@ -59,7 +79,9 @@ class AppMain extends LitElement {
         <aside>
           <nav>
             <h1 class="mdc-typography--headline5">Content table</h1>
-            <a href="/getting-started">Getting Started</a>
+            <ul>
+              <li><a href="/getting-started">Getting Started</a></li>
+            </ul>
           </nav>
         </aside>
       </div>
