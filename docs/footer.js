@@ -4,6 +4,12 @@ import './github.js';
 class AppFooter extends LitElement {
   static get styles() {
     return css`
+      :host {
+        display: block;
+        background-color: white;
+        position: relative;
+      }
+
       a {
         color: var(--mdc-theme-primary);
         text-decoration: none;
