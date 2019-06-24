@@ -4,7 +4,7 @@ class AppCode extends LitElement {
   static get styles() {
     return css`
       code {
-        display: inline-block;
+        display: block;
         background-color: #333;
         color: #ddd;
         padding: 20px;
