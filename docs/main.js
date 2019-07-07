@@ -14,7 +14,7 @@ class AppMain extends LitElement {
   static get styles() {
     return css`
       .app-main {
-        --aside-width: 400px;
+        --aside-width: 320px;
         max-width: 1260px;
         margin: 0 auto;
         position: relative;
@@ -37,6 +37,12 @@ class AppMain extends LitElement {
         right: 0;
         width: calc((100vw - 1260px) / 2 + var(--aside-width));
         background-color: #ECEFF1;
+      }
+
+      @media(max-width:1260px) {
+        aside {
+          width: var(--aside-width);
+        }
       }
 
       aside a {
