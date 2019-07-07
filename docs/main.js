@@ -6,6 +6,7 @@ import './home.js';
 import './getting-started.js';
 import './render-content.js';
 import './not-found.js';
+import './footer.js';
 
 connectRouter(store);
 
@@ -118,6 +119,7 @@ class AppMain extends LitElement {
             </ul>
           </nav>
         </aside>
+        <app-footer></app-footer>
       </div>
     `;
   }
